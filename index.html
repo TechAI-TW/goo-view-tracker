@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>股癌觀點追蹤器</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Gooaye View Tracker</p>
+      <h1>股癌觀點追蹤器</h1>
+      <p class="subtitle">追蹤股癌 2026 年 5 月以來公開 Podcast 觀點，整理市場主線、提及產業、股票與風險訊號。</p>
+      <div class="actions">
+        <a class="button" href="data/daily_tracker.csv" download>下載 CSV</a>
+        <a class="button secondary" href="https://podcasts.apple.com/tw/podcast/gooaye-%E8%82%A1%E7%99%8C/id1500839292" target="_blank" rel="noreferrer">官方 Podcast</a>
+      </div>
+    </div>
+    <div class="stats">
+      <div><span id="stat-days">-</span><small>追蹤天數</small></div>
+      <div><span id="stat-episodes">-</span><small>新集數</small></div>
+      <div><span>EP663</span><small>最新確認</small></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel summary">
+      <h2>五月以來主線</h2>
+      <p>目前主軸從 AI 軟體分層、AI 硬體輪動，延伸到被動元件漲價循環、光通訊與第二梯隊輪動。國巨是被動元件龍頭代表，但最新語氣已從「產業確認」轉向「股價漲多需控風險」。</p>
+      <div class="chips" id="topic-chips"></div>
+    </section>
+
+    <section class="controls panel">
+      <div class="control-group">
+        <label for="search">搜尋</label>
+        <input id="search" placeholder="輸入國巨、被動元件、EP663、光通訊..." />
+      </div>
+      <div class="control-group">
+        <label for="status-filter">狀態</label>
+        <select id="status-filter">
+          <option value="all">全部</option>
+          <option value="有新集數">有新集數</option>
+          <option value="無新集數">無新集數</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="topic-filter">主題</label>
+        <select id="topic-filter">
+          <option value="all">全部主題</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-title">
+        <h2>每日追蹤表</h2>
+        <span id="result-count"></span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>日期</th>
+              <th>狀態</th>
+              <th>集數</th>
+              <th>觀點摘要</th>
+              <th>產業/主題</th>
+              <th>提及標的</th>
+              <th>追蹤含義</th>
+              <th>風險</th>
+            </tr>
+          </thead>
+          <tbody id="daily-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <h2>新集數時間線</h2>
+        <div id="timeline" class="timeline"></div>
+      </div>
+      <div class="panel">
+        <h2>Watchlist</h2>
+        <div id="watchlist" class="watchlist"></div>
+      </div>
+    </section>
+
+    <section class="panel disclaimer">
+      <h2>使用邊界</h2>
+      <p>本網站是市場資訊與投資觀點研究工具，不是投資建議。資料以公開 Podcast 與公開整理為基礎，非官方逐字稿內容不應大量重製；實際投資需再驗證基本面、籌碼、估值與風險。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built for TechAI-TW · v0.1 · 2026-05 tracking dataset</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
