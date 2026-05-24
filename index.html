@@ -11,22 +11,26 @@
     <div>
       <p class="eyebrow">Gooaye View Tracker</p>
       <h1>股癌觀點追蹤器</h1>
-      <p class="subtitle">追蹤股癌 2026 年 5 月以來公開 Podcast 觀點，整理市場主線、提及產業、股票與風險訊號。</p>
+      <p class="subtitle">追蹤股癌公開 Podcast 觀點，整理市場主線、提及產業、股票與風險訊號，並逐步建立可回溯資料庫。</p>
       <div class="actions">
         <a class="button" href="data/daily_tracker.csv" download>下載 CSV</a>
+        <a class="button secondary" href="data/tracker.json" target="_blank" rel="noreferrer">查看 JSON 資料庫</a>
         <a class="button secondary" href="https://podcasts.apple.com/tw/podcast/gooaye-%E8%82%A1%E7%99%8C/id1500839292" target="_blank" rel="noreferrer">官方 Podcast</a>
       </div>
     </div>
     <div class="stats">
       <div><span id="stat-days">-</span><small>追蹤天數</small></div>
       <div><span id="stat-episodes">-</span><small>新集數</small></div>
-      <div><span>EP663</span><small>最新確認</small></div>
+      <div><span id="stat-latest">-</span><small>最新確認</small></div>
     </div>
   </header>
 
   <main>
     <section class="panel summary">
-      <h2>五月以來主線</h2>
+      <div class="section-title">
+        <h2>資料庫狀態</h2>
+        <span id="meta-updated"></span>
+      </div>
       <p>目前主軸從 AI 軟體分層、AI 硬體輪動，延伸到被動元件漲價循環、光通訊與第二梯隊輪動。國巨是被動元件龍頭代表，但最新語氣已從「產業確認」轉向「股價漲多需控風險」。</p>
       <div class="chips" id="topic-chips"></div>
     </section>
@@ -76,6 +80,29 @@
       </div>
     </section>
 
+    <section class="panel">
+      <div class="section-title">
+        <h2>觀點事件資料庫</h2>
+        <span>把單集拆成可追蹤的投資觀點事件</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>日期</th>
+              <th>集數</th>
+              <th>主題</th>
+              <th>方向</th>
+              <th>觀點摘要</th>
+              <th>標的</th>
+              <th>後續追蹤</th>
+            </tr>
+          </thead>
+          <tbody id="events-body"></tbody>
+        </table>
+      </div>
+    </section>
+
     <section class="grid">
       <div class="panel">
         <h2>新集數時間線</h2>
@@ -87,6 +114,23 @@
       </div>
     </section>
 
+    <section class="panel">
+      <h2>來源稽核表</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>類型</th>
+              <th>來源</th>
+              <th>URL</th>
+              <th>使用方式</th>
+            </tr>
+          </thead>
+          <tbody id="sources-body"></tbody>
+        </table>
+      </div>
+    </section>
+
     <section class="panel disclaimer">
       <h2>使用邊界</h2>
       <p>本網站是市場資訊與投資觀點研究工具，不是投資建議。資料以公開 Podcast 與公開整理為基礎，非官方逐字稿內容不應大量重製；實際投資需再驗證基本面、籌碼、估值與風險。</p>
@@ -94,7 +138,7 @@
   </main>
 
   <footer>
-    <p>Built for TechAI-TW · v0.1 · 2026-05 tracking dataset</p>
+    <p>Built for TechAI-TW · data-driven version · GitHub Pages static site</p>
   </footer>
 
   <script src="app.js"></script>
