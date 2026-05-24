@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "project": "Gooaye 股癌觀點追蹤器",
+    "version": "0.2",
+    "updated_at": "2026-05-24",
+    "scope": "目前收錄 2026 年 5 月公開可確認觀點；完整歷史集數需分批補齊。",
+    "disclaimer": "本資料庫是公開觀點研究工具，不是投資建議。"
+  },
+  "daily": [
+    {"date":"2026-05-01","status":"無新集數","episode":"","summary":"5月追蹤起點；尚無5月新公開集數可歸檔。","sectors":[],"tickers":[],"signal":"等待下一集或社群新訊號。","risk":""},
+    {"date":"2026-05-02","status":"有新集數","episode":"EP658","summary":"AI 取代論被校正；軟體股要用產品力與抗 AI 程度分層。","sectors":["美股軟體","AI應用","雲端","資安"],"tickers":["Cloudflare","CrowdStrike","Palantir","Atlassian","Adobe","Salesforce","Google","Microsoft"],"signal":"被誤殺軟體與巨頭可能是下一輪輪動候選；硬體題材跑完後觀察資金回流軟體。","risk":"不要把 AI 完成單一任務推論成整家公司或職位被取代。"},
+    {"date":"2026-05-03","status":"無新集數","episode":"EP658延續","summary":"無新集數；延續追蹤前一集主題。","sectors":["美股軟體","AI應用","雲端","資安"],"tickers":["Cloudflare","CrowdStrike","Palantir","Atlassian","Adobe","Salesforce","Google","Microsoft"],"signal":"追蹤前一觀點是否被新聞與股價驗證。","risk":"若當日有社群貼文需另補。"},
+    {"date":"2026-05-04","status":"無新集數","episode":"EP658延續","summary":"無新集數；延續追蹤前一集主題。","sectors":["美股軟體","AI應用","雲端","資安"],"tickers":["Cloudflare","CrowdStrike","Palantir","Atlassian","Adobe","Salesforce","Google","Microsoft"],"signal":"追蹤前一觀點是否被新聞與股價驗證。","risk":"若當日有社群貼文需另補。"},
+    {"date":"2026-05-05","status":"無新集數","episode":"EP658延續","summary":"無新集數；延續追蹤前一集主題。","sectors":["美股軟體","AI應用","雲端","資安"],"tickers":["Cloudflare","CrowdStrike","Palantir","Atlassian","Adobe","Salesforce","Google","Microsoft"],"signal":"追蹤前一觀點是否被新聞與股價驗證。","risk":"若當日有社群貼文需另補。"},
+    {"date":"2026-05-06","status":"有新集數","episode":"EP659","summary":"被動元件第三波升溫；國巨 AI 誓師與信昌電交期拉長，使市場開始提前反映後續漲價可能。","sectors":["被動元件","CPU/ASIC","AI Server"],"tickers":["國巨","信昌電","GUC","世芯-KY","聯發科","AMD"],"signal":"國巨是主線龍頭；第二排被動元件要追蹤交期與漲價函。","risk":"部分標的預期可能已被充分反映，不宜無腦加大部位。"},
+    {"date":"2026-05-07","status":"無新集數","episode":"EP659延續","summary":"無新集數；延續追蹤前一集主題。","sectors":["被動元件","CPU/ASIC","AI Server"],"tickers":["國巨","信昌電","GUC","世芯-KY","聯發科","AMD"],"signal":"追蹤被動元件交期、漲價函、族群擴散。","risk":"若當日有社群貼文需另補。"},
+    {"date":"2026-05-08","status":"無新集數","episode":"EP659延續","summary":"無新集數；延續追蹤前一集主題。","sectors":["被動元件","CPU/ASIC","AI Server"],"tickers":["國巨","信昌電","GUC","世芯-KY","聯發科","AMD"],"signal":"追蹤被動元件交期、漲價函、族群擴散。","risk":"若當日有社群貼文需另補。"},
+    {"date":"2026-05-09","status":"有新集數","episode":"EP660","summary":"市場位階高，利空可被放大；NVIDIA 供應鏈局部殺盤，成熟製程與第二梯隊輪動。","sectors":["NVIDIA供應鏈","成熟製程","被動元件","資金/槓桿"],"tickers":["NVIDIA","瑞昱","聯詠","聯電","世界先進","環球晶"],"signal":"資金往成熟製程與第二梯隊尋找相對安全標的；被動元件進一步擴散。","risk":"位階高時利空易被放大。"},
+    {"date":"2026-05-10","status":"無新集數","episode":"EP660延續","summary":"無新集數；延續追蹤前一集主題。","sectors":["NVIDIA供應鏈","成熟製程","被動元件","資金/槓桿"],"tickers":["NVIDIA","瑞昱","聯詠","聯電","世界先進","環球晶"],"signal":"追蹤高位階族群是否汰弱留強。","risk":"若當日有社群貼文需另補。"},
+    {"date":"2026-05-11","status":"無新集數","episode":"EP660延續","summary":"無新集數；延續追蹤前一集主題。","sectors":["NVIDIA供應鏈","成熟製程","被動元件","資金/槓桿"],"tickers":["NVIDIA","瑞昱","聯詠","聯電","世界先進","環球晶"],"signal":"追蹤高位階族群是否汰弱留強。","risk":"若當日有社群貼文需另補。"},
+    {"date":"2026-05-12","status":"無新集數","episode":"EP660延續","summary":"無新集數；延續追蹤前一集主題。","sectors":["NVIDIA供應鏈","成熟製程","被動元件","資金/槓桿"],"tickers":["NVIDIA","瑞昱","聯詠","聯電","世界先進","環球晶"],"signal":"追蹤高位階族群是否汰弱留強。","risk":"若當日有社群貼文需另補。"},
+    {"date":"2026-05-13","status":"有新集數","episode":"EP661","summary":"被動元件排擠效應深化；AI Server 換代導致高規 MLCC 產能集中，台系廠吃排擠訂單。","sectors":["被動元件","NVIDIA供應鏈","光通訊","權值股防守"],"tickers":["國巨","台系被動元件","NVIDIA","台積電"],"signal":"海外族群先強、台股後跟；光通訊可能是下一個 setup。","risk":"漲價要拆成需求驅動與成本驅動。"},
+    {"date":"2026-05-14","status":"無新集數","episode":"EP661延續","summary":"無新集數；延續追蹤前一集主題。","sectors":["被動元件","NVIDIA供應鏈","光通訊","權值股防守"],"tickers":["國巨","台系被動元件","NVIDIA","台積電"],"signal":"追蹤被動元件與光通訊是否接續輪動。","risk":"若當日有社群貼文需另補。"},
+    {"date":"2026-05-15","status":"無新集數","episode":"EP661延續","summary":"無新集數；延續追蹤前一集主題。","sectors":["被動元件","NVIDIA供應鏈","光通訊","權值股防守"],"tickers":["國巨","台系被動元件","NVIDIA","台積電"],"signal":"追蹤被動元件與光通訊是否接續輪動。","risk":"若當日有社群貼文需另補。"},
+    {"date":"2026-05-16","status":"有新集數","episode":"EP662","summary":"大跌不恐慌；重點看市場反應與資金輪動。被動元件進入漲價三階段觀察。","sectors":["被動元件","PMIC/電源","資安/SaaS","台積電資金效應"],"tickers":["台積電","老AI","投信中小型股","CrowdStrike","Figma"],"signal":"追創新高領導族群；被動元件看現貨漲價、漲價信、控貨／停單。","risk":"資金可能從老 AI 與投信中小型股提款。"},
+    {"date":"2026-05-17","status":"無新集數","episode":"EP662延續","summary":"無新集數；延續追蹤前一集主題。","sectors":["被動元件","PMIC/電源","資安/SaaS","台積電資金效應"],"tickers":["台積電","老AI","投信中小型股","CrowdStrike","Figma"],"signal":"追蹤領導族群是否創高續強。","risk":"若當日有社群貼文需另補。"},
+    {"date":"2026-05-18","status":"無新集數","episode":"EP662延續","summary":"無新集數；延續追蹤前一集主題。","sectors":["被動元件","PMIC/電源","資安/SaaS","台積電資金效應"],"tickers":["台積電","老AI","投信中小型股","CrowdStrike","Figma"],"signal":"追蹤領導族群是否創高續強。","risk":"若當日有社群貼文需另補。"},
+    {"date":"2026-05-19","status":"無新集數","episode":"EP662延續","summary":"無新集數；延續追蹤前一集主題。","sectors":["被動元件","PMIC/電源","資安/SaaS","台積電資金效應"],"tickers":["台積電","老AI","投信中小型股","CrowdStrike","Figma"],"signal":"追蹤領導族群是否創高續強。","risk":"若當日有社群貼文需另補。"},
+    {"date":"2026-05-20","status":"有新集數","episode":"EP663","summary":"被動元件進入明確上升循環；但股價漲多後不宜再亂喊多。","sectors":["被動元件","AI硬體供應鏈","光通訊","老AI"],"tickers":["國巨","華新科","鈺邦","立隆電","日電貿","Panasonic","Broadcom","NVIDIA"],"signal":"漲價函、現貨掃貨、高階料號斷供、交期拉長；防守關鍵是是否大規模擴產。","risk":"若出現大規模且有共識擴產會是中期風險；光通不能過度追高。"},
+    {"date":"2026-05-21","status":"無新集數","episode":"EP663延續","summary":"無新集數；延續追蹤前一集主題。","sectors":["被動元件","AI硬體供應鏈","光通訊","老AI"],"tickers":["國巨","華新科","鈺邦","立隆電","日電貿","Panasonic","Broadcom","NVIDIA"],"signal":"追蹤被動元件漲價與族群擴散是否被股價驗證。","risk":"若當日有社群貼文需另補。"},
+    {"date":"2026-05-22","status":"無新集數","episode":"EP663延續","summary":"無新集數；延續追蹤前一集主題。","sectors":["被動元件","AI硬體供應鏈","光通訊","老AI"],"tickers":["國巨","華新科","鈺邦","立隆電","日電貿","Panasonic","Broadcom","NVIDIA"],"signal":"追蹤被動元件漲價與族群擴散是否被股價驗證。","risk":"若當日有社群貼文需另補。"},
+    {"date":"2026-05-23","status":"無新集數","episode":"EP663延續","summary":"無新集數；延續追蹤前一集主題。","sectors":["被動元件","AI硬體供應鏈","光通訊","老AI"],"tickers":["國巨","華新科","鈺邦","立隆電","日電貿","Panasonic","Broadcom","NVIDIA"],"signal":"追蹤被動元件漲價與族群擴散是否被股價驗證。","risk":"若當日有社群貼文需另補。"}
+  ],
+  "view_events": [
+    {"id":"V20260502-01","date":"2026-05-02","episode":"EP658","theme":"AI軟體分層","stance":"偏多但分層","summary":"AI 不會簡單讓軟體公司全部失去價值，應以產品力、資料壁壘、工作流黏著度與抗 AI 程度分層。","tickers":["Cloudflare","CrowdStrike","Palantir","Atlassian","Adobe","Salesforce","Google","Microsoft"],"follow_up":"追蹤財報後估值修復與資金是否從 AI 硬體轉向軟體。"},
+    {"id":"V20260506-01","date":"2026-05-06","episode":"EP659","theme":"被動元件第三波","stance":"偏多","summary":"國巨 AI 相關動作與信昌電交期拉長，使市場開始重估被動元件漲價循環。","tickers":["國巨","信昌電"],"follow_up":"追蹤交期、漲價函、第二排補漲。"},
+    {"id":"V20260506-02","date":"2026-05-06","episode":"EP659","theme":"CPU/ASIC與AI硬體","stance":"偏多但避免追高","summary":"AI 算力主線從 GPU 延伸到 CPU、ASIC 與相關供應鏈。","tickers":["GUC","世芯-KY","聯發科","AMD"],"follow_up":"觀察海外 ASIC/TPU 新聞與台股供應鏈反應。"},
+    {"id":"V20260509-01","date":"2026-05-09","episode":"EP660","theme":"高位階風險","stance":"多頭但提高風控","summary":"市場位階高時，即使利空本身不大，也可能因估值與籌碼擁擠而放大殺盤。","tickers":["NVIDIA"],"follow_up":"追蹤領導股是否跌破關鍵均線與族群是否汰弱留強。"},
+    {"id":"V20260509-02","date":"2026-05-09","episode":"EP660","theme":"成熟製程與第二梯隊輪動","stance":"中性偏多","summary":"資金從第一梯隊外溢到成熟製程與第二梯隊，尋找相對低位階與防守性。","tickers":["瑞昱","聯詠","聯電","世界先進","環球晶"],"follow_up":"觀察營收、產能利用率與股價相對強弱。"},
+    {"id":"V20260513-01","date":"2026-05-13","episode":"EP661","theme":"被動元件排擠效應","stance":"偏多","summary":"AI Server 換代造成高規 MLCC 產能集中，台系被動元件廠可能承接排擠訂單。","tickers":["國巨","台系被動元件"],"follow_up":"追蹤需求驅動漲價是否成立，區分成本推升漲價。"},
+    {"id":"V20260513-02","date":"2026-05-13","episode":"EP661","theme":"光通訊輪動","stance":"觀察偏多","summary":"海外光通族群先強，台股可能後跟；光通可能成為被動元件後的新 setup。","tickers":["光通訊供應鏈"],"follow_up":"追蹤 CPO、矽光子、美股光通領頭股與台股落後補漲。"},
+    {"id":"V20260516-01","date":"2026-05-16","episode":"EP662","theme":"大跌不恐慌","stance":"中性偏多","summary":"重點不是跌一天，而是觀察市場反應強度、資金是否仍在領導族群輪動。","tickers":["台積電","老AI","投信中小型股"],"follow_up":"看資金是否流向台積電並造成其他族群提款。"},
+    {"id":"V20260516-02","date":"2026-05-16","episode":"EP662","theme":"被動元件漲價三階段","stance":"偏多","summary":"被動元件可用現貨漲價、漲價信、控貨／停單三階段追蹤循環強度。","tickers":["國巨","華新科","鈺邦","立隆電"],"follow_up":"建立每日漲價函、交期、月營收、毛利率追蹤。"},
+    {"id":"V20260520-01","date":"2026-05-20","episode":"EP663","theme":"被動元件上升循環確認","stance":"產業偏多、股價追高謹慎","summary":"MLCC、鋁電容、電感、電阻等被動元件進入明確上升循環，但股價已漲多，不適合把產業偏多解讀成無腦追高。","tickers":["國巨","華新科","鈺邦","立隆電","日電貿"],"follow_up":"觀察是否擴產；大規模擴產會是中期風險。"},
+    {"id":"V20260520-02","date":"2026-05-20","episode":"EP663","theme":"AI硬體與老AI復活","stance":"觀察偏多","summary":"AI 硬體供應鏈、Broadcom/NVIDIA/Google TPU 相關線索仍在延續，部分被冷落老 AI 可能重新被市場檢視。","tickers":["Broadcom","NVIDIA","老AI"],"follow_up":"追蹤產品節奏、訂單能見度與毛利率低谷是否過去。"},
+    {"id":"V20260520-03","date":"2026-05-20","episode":"EP663","theme":"光通訊短線震盪長線未壞","stance":"中性偏多","summary":"光通訊短線可能利多出盡或漲多回檔，但長線需求與市場空間未被否定。","tickers":["光通訊供應鏈"],"follow_up":"區分題材結束與漲多整理。"}
+  ],
+  "watchlist": [
+    {"category":"被動元件龍頭","items":"國巨","view":"產業主線龍頭，但股價追高風險上升。","dailyCheck":"股價、成交量、外資/投信、月營收、毛利率。","warning":"大規模擴產、漲價不如預期、跌破短均後反彈無力。"},
+    {"category":"被動元件第二排","items":"華新科、信昌電、鈺邦、立隆電、日電貿","view":"受惠交期拉長、漲價函、排擠訂單。","dailyCheck":"交期、漲價函、營收、法人籌碼。","warning":"只有成本推升而非需求驅動，或漲價無法轉嫁。"},
+    {"category":"AI硬體/ASIC","items":"GUC、世芯-KY、聯發科、Broadcom/Google TPU 相關","view":"GPU 外的 AI 算力主線輪動。","dailyCheck":"海外 ASIC/TPU 新聞、台股供應鏈反應。","warning":"預期已打滿、營收驗證跟不上。"},
+    {"category":"光通訊","items":"CPO、矽光子、光通供應鏈","view":"美股先強，台股可能後跟；短期回檔不等於結束。","dailyCheck":"美股光通領頭股、台股相關股價強弱。","warning":"利多出盡、成交量失控後跌破關鍵均線。"}
+  ],
+  "sources": [
+    {"type":"official","name":"Apple Podcast Gooaye 股癌","url":"https://podcasts.apple.com/tw/podcast/gooaye-%E8%82%A1%E7%99%8C/id1500839292","usage":"確認節目、集數與官方連結"},
+    {"type":"public_notes","name":"公開整理筆記與逐字稿摘要","url":"multiple public note pages","usage":"初步摘要觀點；需保留非官方標記並避免大量重製原文"}
+  ]
+}
