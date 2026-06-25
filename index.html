@@ -3,142 +3,172 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>股癌觀點追蹤器</title>
+  <title>BreakPing Rest Bank</title>
+  <meta name="description" content="像存摺一樣，把真正休息時間存起來。BreakPing Rest Bank cloud dashboard demo." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
-    <div>
-      <p class="eyebrow">Gooaye View Tracker</p>
-      <h1>股癌觀點追蹤器</h1>
-      <p class="subtitle">追蹤股癌公開 Podcast 觀點，整理市場主線、提及產業、股票與風險訊號，並逐步建立可回溯資料庫。</p>
-      <div class="actions">
-        <a class="button" href="data/daily_tracker.csv" download>下載 CSV</a>
-        <a class="button secondary" href="data/tracker.json" target="_blank" rel="noreferrer">查看 JSON 資料庫</a>
-        <a class="button secondary" href="https://podcasts.apple.com/tw/podcast/gooaye-%E8%82%A1%E7%99%8C/id1500839292" target="_blank" rel="noreferrer">官方 Podcast</a>
-      </div>
-    </div>
-    <div class="stats">
-      <div><span id="stat-days">-</span><small>追蹤天數</small></div>
-      <div><span id="stat-episodes">-</span><small>新集數</small></div>
-      <div><span id="stat-latest">-</span><small>最新確認</small></div>
-    </div>
+  <header class="topbar">
+    <a class="brand" href="#hero" aria-label="BreakPing Rest Bank">
+      <span class="mark">BP</span>
+      <span>BreakPing Rest Bank</span>
+    </a>
+    <nav>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#passbook">Passbook</a>
+      <a href="#cheques">Cheques</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#sync">Sync</a>
+    </nav>
   </header>
 
+  <section class="hero" id="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Screen wellness, not surveillance</p>
+      <h1>像存摺一樣，把真正休息時間存起來。</h1>
+      <p class="lead">BreakPing Rest Bank 將桌面 App 偵測到的真正休息時間轉成 REST credit，累積到門檻後產生 Rest Cheque。網站負責健康存摺、報表與付費升級。</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#dashboard">View demo dashboard</a>
+        <a class="btn secondary" href="#pricing">See pricing</a>
+      </div>
+      <ul class="privacy-list">
+        <li>No screenshots</li>
+        <li>No keystroke content</li>
+        <li>No app or website names</li>
+      </ul>
+    </div>
+    <div class="hero-card glass">
+      <div class="mini-label">Rest Bank Balance</div>
+      <strong id="hero-balance">0 REST</strong>
+      <p>1 minute verified rest = 1 REST credit</p>
+      <div class="cheque-preview">
+        <span>Rest Cheque</span>
+        <b id="hero-cheques">0 issued</b>
+      </div>
+    </div>
+  </section>
+
   <main>
-    <section class="panel summary">
+    <section class="dashboard" id="dashboard">
+      <div class="section-heading">
+        <p class="eyebrow">Cloud dashboard</p>
+        <h2>我的健康存摺</h2>
+        <p>這裡模擬 Windows App 同步到網站後，使用者在網頁看到的健康存摺與報表。</p>
+      </div>
+
+      <div class="metric-grid">
+        <article class="metric-card highlight">
+          <span>累積 REST credit</span>
+          <strong id="total-rest">-</strong>
+          <small>可轉換為 Rest Cheque</small>
+        </article>
+        <article class="metric-card">
+          <span>本週存入</span>
+          <strong id="week-rest">-</strong>
+          <small>verified rest only</small>
+        </article>
+        <article class="metric-card">
+          <span>今日用電腦</span>
+          <strong id="today-use">-</strong>
+          <small>active + rest override</small>
+        </article>
+        <article class="metric-card">
+          <span>假休息真使用</span>
+          <strong id="override-time">-</strong>
+          <small>not counted as REST</small>
+        </article>
+      </div>
+
+      <div class="panel bank-progress">
+        <div>
+          <h3>下一張 Rest Cheque</h3>
+          <p>累積 300 REST 後，自動發出一張 Rest Cheque。未來可設計為 App 買斷折抵、免一年年費或 Pro pass。</p>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-meta"><span id="cheque-progress-label">0 / 300 REST</span><span id="cheque-progress-percent">0%</span></div>
+          <div class="progress"><i id="cheque-progress"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-two">
+      <div class="panel" id="passbook">
+        <div class="section-title">
+          <h2>休息存摺</h2>
+          <button class="text-btn" id="download-passbook">Download CSV</button>
+        </div>
+        <div class="passbook-list" id="passbook-list"></div>
+      </div>
+
+      <div class="panel" id="cheques">
+        <div class="section-title">
+          <h2>Rest Cheques</h2>
+          <span class="badge">No cash value</span>
+        </div>
+        <div class="cheque-list" id="cheque-list"></div>
+      </div>
+    </section>
+
+    <section class="panel timeline-panel" id="reports">
       <div class="section-title">
-        <h2>資料庫狀態</h2>
-        <span id="meta-updated"></span>
+        <div>
+          <h2>今日時間軸</h2>
+          <p>藍色為一般使用，綠色為真正休息，紫色為假休息真使用，紅點為提醒。</p>
+        </div>
+        <label class="range-control">Display range
+          <select id="range-select">
+            <option value="7-18">07:00–18:00</option>
+            <option value="9-21">09:00–21:00</option>
+            <option value="0-24">00:00–24:00</option>
+          </select>
+        </label>
       </div>
-      <p>目前主軸從 AI 軟體分層、AI 硬體輪動，延伸到被動元件漲價循環、光通訊與第二梯隊輪動。國巨是被動元件龍頭代表，但最新語氣已從「產業確認」轉向「股價漲多需控風險」。</p>
-      <div class="chips" id="topic-chips"></div>
+      <div class="timeline" id="timeline"></div>
+      <div class="timeline-legend"><span class="use"></span>Active use <span class="rest"></span>Verified rest <span class="override"></span>Rest override <span class="reminder"></span>Reminder</div>
     </section>
 
-    <section class="controls panel">
-      <div class="control-group">
-        <label for="search">搜尋</label>
-        <input id="search" placeholder="輸入國巨、被動元件、EP663、光通訊..." />
-      </div>
-      <div class="control-group">
-        <label for="status-filter">狀態</label>
-        <select id="status-filter">
-          <option value="all">全部</option>
-          <option value="有新集數">有新集數</option>
-          <option value="無新集數">無新集數</option>
-        </select>
-      </div>
-      <div class="control-group">
-        <label for="topic-filter">主題</label>
-        <select id="topic-filter">
-          <option value="all">全部主題</option>
-        </select>
-      </div>
-    </section>
-
-    <section class="panel">
+    <section class="panel sync-panel" id="sync">
       <div class="section-title">
-        <h2>每日追蹤表</h2>
-        <span id="result-count"></span>
+        <div>
+          <h2>Desktop App sync design</h2>
+          <p>正式版會由 Windows App 每 5 分鐘或手動 Sync 上傳本機健康資料。此 demo 使用 sample payload。</p>
+        </div>
+        <button class="btn secondary" id="simulate-sync">Simulate sync</button>
       </div>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>日期</th>
-              <th>狀態</th>
-              <th>集數</th>
-              <th>觀點摘要</th>
-              <th>產業/主題</th>
-              <th>提及標的</th>
-              <th>追蹤含義</th>
-              <th>風險</th>
-            </tr>
-          </thead>
-          <tbody id="daily-body"></tbody>
-        </table>
-      </div>
+      <pre id="sync-payload"></pre>
     </section>
 
-    <section class="panel">
-      <div class="section-title">
-        <h2>觀點事件資料庫</h2>
-        <span>把單集拆成可追蹤的投資觀點事件</span>
+    <section class="pricing" id="pricing">
+      <div class="section-heading">
+        <p class="eyebrow">Billing model</p>
+        <h2>線上付費方案</h2>
+        <p>第一版可先做付款頁和訂閱狀態，金流串接 ECPay / NewebPay / TapPay。</p>
       </div>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>日期</th>
-              <th>集數</th>
-              <th>主題</th>
-              <th>方向</th>
-              <th>觀點摘要</th>
-              <th>標的</th>
-              <th>後續追蹤</th>
-            </tr>
-          </thead>
-          <tbody id="events-body"></tbody>
-        </table>
+      <div class="price-grid">
+        <article class="price-card">
+          <h3>Free</h3>
+          <strong>NT$0</strong>
+          <p>本機紀錄、今日存摺、基本提醒。</p>
+          <button>Current plan</button>
+        </article>
+        <article class="price-card featured">
+          <h3>Pro Annual</h3>
+          <strong>NT$699 / year</strong>
+          <p>雲端同步、健康存摺、Rest Cheque、歷史報表、Excel 匯出。</p>
+          <button id="pay-annual">Upgrade</button>
+        </article>
+        <article class="price-card">
+          <h3>Lifetime Early Supporter</h3>
+          <strong>NT$990</strong>
+          <p>早鳥買斷概念，可搭配 Rest Cheque 做折抵或免年費兌換。</p>
+          <button id="pay-lifetime">Buy once</button>
+        </article>
       </div>
-    </section>
-
-    <section class="grid">
-      <div class="panel">
-        <h2>新集數時間線</h2>
-        <div id="timeline" class="timeline"></div>
-      </div>
-      <div class="panel">
-        <h2>Watchlist</h2>
-        <div id="watchlist" class="watchlist"></div>
-      </div>
-    </section>
-
-    <section class="panel">
-      <h2>來源稽核表</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>類型</th>
-              <th>來源</th>
-              <th>URL</th>
-              <th>使用方式</th>
-            </tr>
-          </thead>
-          <tbody id="sources-body"></tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="panel disclaimer">
-      <h2>使用邊界</h2>
-      <p>本網站是市場資訊與投資觀點研究工具，不是投資建議。資料以公開 Podcast 與公開整理為基礎，非官方逐字稿內容不應大量重製；實際投資需再驗證基本面、籌碼、估值與風險。</p>
     </section>
   </main>
 
   <footer>
-    <p>Built for TechAI-TW · data-driven version · GitHub Pages static site</p>
+    <p>BreakPing Rest Bank Cloud Demo. Wellness reward vouchers have no cash value. This is not a medical device or employee monitoring product.</p>
   </footer>
 
   <script src="app.js"></script>
