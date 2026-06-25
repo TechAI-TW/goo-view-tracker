@@ -1,30 +1,62 @@
-# Gooaye 股癌觀點追蹤器
+# BreakPing Rest Bank Cloud Demo
 
-這是一個用 GitHub Pages 部署的投資觀點追蹤網站，第一版追蹤 2026 年 5 月以來 Gooaye 股癌公開 Podcast 觀點。
+BreakPing Rest Bank is a cloud dashboard concept for a screen-health desktop app.
 
-## 功能
+The intended product flow is:
 
-- 每日觀點追蹤表
-- 新集數時間線
-- 產業／股票／關鍵字搜尋
-- 被動元件、AI 硬體、光通訊等主線分類
-- Watchlist 與風險提示
-- CSV 下載
+1. User installs the Windows desktop app.
+2. The app records only state-level data: active use, verified rest, rest override, reminders, snoozes, and Rest Cheque events.
+3. The app syncs summary data to the cloud.
+4. The website shows the user's Rest Bank passbook, daily timeline, Rest Cheques, reports, and billing options.
+5. Paid plans unlock cloud sync, long-term history, exports, and future App pass benefits.
 
-## 目前版本
+## Privacy position
 
-v0.1：2026/5/1 至 2026/5/23 股癌觀點資料。
+BreakPing is designed as a wellness product, not an employee monitoring tool.
 
-## GitHub Pages
+It does not collect:
 
-本 repo 內建 `.github/workflows/deploy.yml`，可用 GitHub Actions 部署到 GitHub Pages。
+- screenshots
+- keystroke content
+- application names
+- website URLs
+- window titles
+- clipboard content
 
-部署完成後網址通常為：
+It only stores time segments and wellness events.
+
+## Current version
+
+This repository contains a static GitHub Pages prototype:
+
+- landing page
+- Rest Bank dashboard
+- health passbook
+- Rest Cheque screen
+- pricing / checkout placeholder
+- desktop sync data preview
+
+The current web demo uses sample data and localStorage. A production version should replace the mock sync layer with a real backend API.
+
+## Suggested production stack
+
+- Web: Next.js or Remix
+- Database: PostgreSQL / Supabase
+- Auth: email magic link + OAuth
+- Payments Taiwan: ECPay / NewebPay / TapPay
+- Payments global: Paddle / Lemon Squeezy / Stripe where supported
+- Desktop app: signed Windows EXE with background sync
+
+## Deployment
+
+This repo can be served through GitHub Pages.
+
+Default URL pattern:
 
 ```text
 https://techai-tw.github.io/goo-view-tracker/
 ```
 
-## 重要聲明
+## Pilot scope
 
-本網站是市場資訊與投資觀點研究工具，不是投資建議。所有標的仍需自行驗證基本面、籌碼、估值與風險。
+This demo is suitable for product validation, investor/partner discussion, and UX review. It is not yet a production payment or medical-health compliance system.
